@@ -33,13 +33,13 @@ export default function Login({saveUser}) {
         setIsLoading(false)
         localStorage.setItem("userToken" , data.token)
         saveUser()
-        navigate("/")
+        navigate("/home")
       }
     }
 
     let mySchema = Yup.object({
       email:Yup.string().email("invalid email").required("Email is required"),
-      password:Yup.string().matches(/^[A-Z][a-z0-9]{3,8}$/,"invalid password").required("password is required"),
+      password:Yup.string().matches(/^[a-z0-9]{4,8}$/,"invalid password ( password must be at least 4 characters long )").required("password is required"),
 
     })
 
