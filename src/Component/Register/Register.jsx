@@ -102,7 +102,7 @@ console.log(formik);
           {formik.errors.phone && formik.touched.phone ? <div className="alert alert-danger">{formik.errors.phone}</div> : ""} 
 
             {isLoading ?<button className='btn bg-success text-white'><i className='fa fa-spin fa-spinner'></i></button> :  <button disabled={!(formik.isValid && formik.dirty)} className='btn bg-success text-white'>Register</button>}
-            <button onClick={goToLogin}  className='btn bg-danger text-white mx-5'>Already have an account</button>
+            <button onClick={goToLogin}  className='btn bg-danger text-white mx-2'>Already have an account</button>
 
 
           </div>
