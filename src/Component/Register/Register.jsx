@@ -42,7 +42,7 @@ export default function Register() {
     let mySchema = Yup.object({
       name:Yup.string().required("Name is required").min(3,"min char is 3").max(15,"max char is 15"),
       email:Yup.string().email("invalid email").required("Email is required"),
-      password:Yup.string().matches(/^[a-z0-9]{4,8}$/,"invalid password ( password must be at least 4 characters long )").required("password is required"),
+      password:Yup.string().matches(/^[A-Za-z0-9]{6,20}$/,"invalid password ( password must be at least 6 characters long )").required("password is required"),
       rePassword:Yup.string().required("Required").oneOf([Yup.ref('password')],"rePassword must be match"),
       phone:Yup.string().required("phone is required").matches(/^01[0125][0-9]{8}$/,"invalid phone")
 

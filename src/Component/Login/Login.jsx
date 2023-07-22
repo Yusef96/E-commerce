@@ -39,7 +39,7 @@ export default function Login({saveUser}) {
 
     let mySchema = Yup.object({
       email:Yup.string().email("invalid email").required("Email is required"),
-      password:Yup.string().matches(/^[a-z0-9]{4,8}$/,"invalid password ( password must be at least 4 characters long )").required("password is required"),
+      password:Yup.string().matches(/^[A-Za-z0-9]{6,20}$/,"invalid password ( password must be at least 6 characters long )").required("password is required"),
 
     })
 
@@ -82,7 +82,7 @@ export default function Login({saveUser}) {
         
 
           {isLoading ?<button className='btn bg-success text-white'><i className='fa fa-spin fa-spinner'></i></button> :  <button className='btn bg-success text-white'>Login</button>}
-          <button onClick={goBack} className='btn bg-danger text-white mx-5'>Don't have an account yet?  Sign Up</button>
+          <button onClick={goBack} className='btn bg-danger text-white mx-2'>Don't have an account yet?  Sign Up</button>
           
 
 

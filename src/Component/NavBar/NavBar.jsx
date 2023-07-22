@@ -20,10 +20,11 @@ export default function NavBar({ userData, logOut }) {
     <>
       <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top ">
         <div className="container">
-          <a className="navbar-brand m-0" href="#">
+          <a className="navbar-brand m-0 d-flex align-items-center " href="#">
             <img src={logo} alt="" className='w-25' />
-            {counter}
-            <button className='btn btn-danger' onClick={()=> dispatch(decrease())}>dec --</button>
+            <h3>FreshCart</h3>
+            {/* {counter} */}
+            {/* <button className='btn btn-danger' onClick={()=> dispatch(decrease())}>dec --</button> */}
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
